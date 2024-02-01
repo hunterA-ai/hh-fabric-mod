@@ -9,5 +9,6 @@ public class HunterHackClient implements ClientModInitializer {
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
 
 		com.hunterhack.event.KeyInputHandler.register();
+		com.hunterhack.networking.HunterHackModMessages.registerS2CPackets();
 	}
 }

@@ -1,5 +1,6 @@
 package com.hunterhack.event;
 
+import com.hunterhack.HunterHackMod;
 import org.lwjgl.glfw.GLFW;
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -17,6 +18,7 @@ public class KeyInputHandler {
     public static final String KEY_CATEGORY_HunterHack = "key.category.hhmod.keybinds";
     public static final String KEY_GEN_TEXT = "key.hhmod.gentext";
 
+
     public static KeyBinding textGenKeyBinding;
     public static String generatedText = "I put the fun in functionality!";
 
@@ -24,7 +26,11 @@ public class KeyInputHandler {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if(textGenKeyBinding.wasPressed()) {
                 // This happens when our custom key is pressed
-                client.player.sendMessage(Text.translatable(generatedText));
+                // Text.of("bing_bong");
+                // Text.translatable(generatedText)
+                // public static client.MessageHandler()
+                client.player.sendMessage(Text.of("bing_bong"));
+                HunterHackMod.LOGGER.info("Keybind pressed");
             }
         });
     }
@@ -37,5 +43,8 @@ public class KeyInputHandler {
             GLFW.GLFW_KEY_O,
             KEY_CATEGORY_HunterHack
             ));
+
+
+        registerKeyInputs();
     }
 }

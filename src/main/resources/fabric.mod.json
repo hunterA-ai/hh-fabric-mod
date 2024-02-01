@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "hhmod",
-	"version": "0.0.1-1.20.4",
+	"version": "${version}",
 	"name": "The Hunter Hack Mod",
 	"description": "Mod created for Hunter, by Hunter.",
 	"authors": [
@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"hunterhack.HunterHackMod"
+			"com.hunterhack.HunterHackMod"
 		],
 		"client": [
-			"hunterhack.HunterHackClient"
+			"com.hunterhack.HunterHackClient"
 		]
 	},
 	"mixins": [

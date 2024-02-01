@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 
 public class HunterHackMod implements ModInitializer {
 
-    public static final Logger LOGGER = LoggerFactory.getLogger("HunterHack");
+    public static final Logger LOGGER = LoggerFactory.getLogger("hhmod");
     
     @Override
     public void onInitialize() {

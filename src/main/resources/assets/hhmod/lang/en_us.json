@@ -1,4 +1,6 @@
 {
     "key.category.hhmod.keybinds": "Hunter Hack Binded Keys",
-    "key.hhmod.gentext": "Generate Text Key"
+    "key.hhmod.gentext": "Generate Text",
+    "key.hmod.spawnstuff": "Spawn Stuff",
+    "key.hmod.automine_strip": "Automatic Strip Mine"
 }

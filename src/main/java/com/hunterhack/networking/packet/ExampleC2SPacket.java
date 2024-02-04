@@ -15,8 +15,25 @@ public class ExampleC2SPacket {
      ServerPlayNetworkHandler handler, 
      PacketByteBuf buf, 
      PacketSender responseSender) {
-        EntityType.COW.spawn(((ServerWorld) player.world), null, null, player, player.getBlockPos(),
-        SpawnReason.TRIGGERED, true, true);
+        // Everything here happens ONLY on the Server! 
+
+        EntityType.TNT.spawn((ServerWorld) player.getWorld(), 
+        null,
+        null,
+        player.getBlockPos(),
+        SpawnReason.TRIGGERED,
+        true,
+        false);
+
+        // can cast (ServerWorld) because 
+        // this block is only ever excecuted when on server
+        EntityType.COW.spawn((ServerWorld) player.getWorld(),
+        null,
+        null,
+        player.getBlockPos(),
+        SpawnReason.TRIGGERED,
+        true,
+        false);
 
     }
 }
